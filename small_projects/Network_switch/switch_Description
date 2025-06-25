@@ -1,0 +1,22 @@
+🛰️ Network Switch – Request Arbitration in SystemVerilog
+
+This is a small project written in SystemVerilog that simulates a simple network switch with request arbitration logic. 
+It was designed as an introductory exercise to understand conditional data routing, signal control, and testbench design.
+
+📦 Project Overview:
+The system receives 4 data inputs (D[0] to D[3]) and corresponding request signals (R[0] to R[3]). 
+If **only one** request is active, the switch forwards the corresponding data to the output. If zero or multiple requests are active, the output is zero.
+
+📘 What I learned:
+- How to route input data based on control (request) logic
+- How to implement simple arbitration mechanisms using loops and counters
+- How to use arrays and indices in SystemVerilog
+- How to write a minimal but effective testbench with `$monitor` and `initial` blocks
+- The importance of verifying corner cases like multiple requests or no requests
+
+This project helped solidify my understanding of how combinational logic behaves when multiple conditions are involved, and how arbitration is handled in basic digital systems.
+
+🛠️ Files:
+- `network_switch.sv`: Core module that implements the switch logic
+- `testbench.sv`: Testbench that stimulates different request patterns and monitors output
+

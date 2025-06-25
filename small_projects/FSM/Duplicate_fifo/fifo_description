@@ -1,0 +1,21 @@
+🧪 Duplicate FIFO – SystemVerilog Project
+
+This is a small project is the **Duplicate FIFO**, developed during my university days.
+
+This design is a modified FIFO queue in which each stored value is **read twice before being removed**, 
+simulating multicast behavior found in many network systems. It was an insightful exercise that taught 
+me how to reuse existing FIFO structures while extending their logic through additional control (specifically, a read duplication mechanism).
+
+📌 Key Concepts I Learned:
+• FIFO (First-In-First-Out) buffering
+• One-hot pointer management
+• Control logic for conditional pointer increment
+• Handling synchronous resets and edge-triggered operations
+• Writing efficient testbenches using `task` and `$strobe` for debugging
+
+🛠️ Project Structure:
+- `duplicate_duth.sv`: Main design module, extending a simple FIFO to support double-read before pop
+- `duplicate_tb.sv`: A rich testbench that checks push/pop behavior, duplicate reads, and corner cases (e.g., overflow, empty FIFO reads)
+
+This project deepened my understanding of data buffering mechanisms and control flow in hardware description languages like SystemVerilog.
+

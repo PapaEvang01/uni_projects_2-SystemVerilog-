@@ -1,0 +1,25 @@
+📊 Odd-Even Merge Sorter in SystemVerilog
+
+Another small SystemVerilog project from my university coursework, focused on understanding sorting networks and static timing analysis.
+
+This design implements an Odd-Even Merge Sorter for four 8-bit numbers using comparator-based modules (sorter). 
+Each sorter takes two inputs, compares them, and outputs the min/max in sorted order. 
+The architecture consists of 5 interconnected sorter modules, forming a pipelined structure 
+that outputs the final max, min, second_max, and second_min values.
+
+To avoid pure combinational paths from input to output, the final design includes input/output registers,
+making it more suitable for real-world hardware synthesis.
+
+📁 Project Files:
+
+sorter.sv: Module for comparing and ordering two 8-bit values.
+even_odd_merge_sorter.sv: Implements the full sorter network with 5 sorter units.
+even_odd_merge_sorter_wrapper.sv: Adds registers at the inputs and outputs of the sorter network.
+even_odd_merge_sorter_tb.sv: Testbench that reads inputs from test.tv and verifies output correctness.
+
+
+This project helped reinforce my understanding of:
+Hardware sorting networks
+Modular design
+Register-based pipelining
+Static timing concerns in digital design

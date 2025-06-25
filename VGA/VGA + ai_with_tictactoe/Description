@@ -1,0 +1,33 @@
+🕹️ VGA Tic-Tac-Toe with AI – SystemVerilog FPGA Project
+
+📌 This project is an enhanced version of the previous simple VGA-based Tic-Tac-Toe game.
+It now features an automatic player (AI) for 'O', allowing single-player gameplay against the FPGA.
+
+This project implements a complete Tic-Tac-Toe game using SystemVerilog, designed for FPGA boards with VGA output and button inputs.
+It features both human interaction and an automatic opponent using simple AI logic.
+
+🔧 Core Features:
+- Visual game board rendered on VGA (800x600 resolution at 72Hz)
+- Cursor control using FPGA buttons (up/down/left/right/play)
+- ROM-based rendering for 'X' and 'O' symbols
+- Real-time win/tie detection and game over handling
+- AI player (for 'O') with priority logic:
+   1. Win if possible
+   2. Block if needed
+   3. Choose the first available move
+
+📁 Included Files:
+- top.sv ................. Top-level game logic (main module)
+- edge_detector.sv ....... Detects rising edges from mechanical buttons
+- MoveGen.sv ............. AI logic to select the next move
+- X_ROM.sv ............... VGA pattern for displaying 'X'
+- O_ROM.sv ............... VGA pattern for displaying 'O'
+- fpga_pins.xdc .......... FPGA constraints for button, clock, and VGA pin mapping
+
+🎯 Notes:
+- Designed and tested for Nexys A7 FPGA board.
+- AI logic and game behavior implemented entirely in SystemVerilog.
+- Button edge detection is used to avoid signal bouncing.
+
+This project is ideal for demonstrating digital system design, FSM control, VGA timing, and basic AI decision-making on FPGAs.
+

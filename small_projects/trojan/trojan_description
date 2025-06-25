@@ -1,0 +1,25 @@
+🛡️ Trojan-Based Hardware Design – SystemVerilog Project
+
+This small SystemVerilog project was developed during my university studies to explore hardware security concepts, 
+specifically the design and testing of a simple hardware Trojan.
+
+📌 Objective:
+The goal was to simulate a malicious component (Trojan) inserted between two elastic (valid/ready) register stages. 
+The Trojan remains passive when `flush = 0`, allowing normal data transmission. However, when `flush = 1`,
+it blocks all outgoing data — effectively flushing the communication channel.
+
+📂 Project Files:
+- `left_register.sv` – Implements the first-stage elastic register.
+- `right_register.sv` – Implements the second-stage elastic register.
+- `trojan.sv` – The top-level module containing both registers and the Trojan logic that intercepts data flow based on the flush signal.
+- `trojan_tb.sv` – A testbench to simulate valid/ready handshaking and trigger flush conditions for verification.
+
+🛠️ Key Concepts Practiced:
+- Valid/Ready interface protocol
+- FSM-style data control
+- Insertion and simulation of malicious logic (Trojan)
+- Testbench development for verification
+
+This exercise strengthened my understanding of timing protocols, modular register-based communication, 
+and how subtle design changes can impact hardware behavior — especially in security-sensitive contexts.
+

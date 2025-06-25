@@ -1,0 +1,77 @@
+🎨 VGA-Based SystemVerilog Projects
+
+These SystemVerilog projects explore real-time VGA graphics and game logic implemented on FPGA hardware,
+specifically targeting the Nexys A7 board.
+
+──────────────────────────────────────────────
+
+1. VGA 4-Square Display
+
+A basic VGA controller that renders four colored squares on a screen.
+
+🧠 Core Logic:
+- Generates 800x600@72Hz VGA timing (HSYNC/VSYNC signals)
+- Uses horizontal/vertical counters to track pixel positions
+- Outputs red, green, blue, and white squares
+
+📁 Files:
+- PanelDisplay.sv – VGA timing, pixel logic
+- PanelDisplay_tb.sv – Testbench with text frame dump
+- vga_pins.xdc – VGA signal + clock constraints
+
+🔧 Features:
+- VGA-compliant timing (50 MHz pixel clock from 100 MHz input)
+- Combinational color logic
+- Simple but complete VGA output foundation
+
+──────────────────────────────────────────────
+
+2. VGA Tic-Tac-Toe (2-Player)
+
+A complete 2-player Tic-Tac-Toe game with VGA display and button input.
+
+🎮 Gameplay:
+- Cursor controlled by UP/DOWN/LEFT/RIGHT buttons
+- PLAY button places mark
+- Turns alternate between X and O
+- Win/tie detection
+
+🖥️ VGA Display:
+- 800x600 resolution @72Hz
+- Grid lines and ROM-based symbol display
+
+📂 Files:
+- top.sv – Main game logic + VGA rendering
+- edge_detector.sv – Debounce logic for buttons
+- X_ROM.sv / O_ROM.sv – Symbol ROMs
+- fpga_pins.xdc – Button and VGA pin assignments
+
+💡 Ideal for learning FSMs, VGA timing, and user interface design.
+
+──────────────────────────────────────────────
+
+3. VGA Tic-Tac-Toe with AI
+
+An upgraded version with a simple AI opponent for Player O.
+
+🧠 AI Logic (MoveGen.sv):
+1. Win if possible
+2. Block player
+3. Pick first empty cell
+
+🚀 Upgrades:
+- AI opponent logic
+- Human vs. machine play
+- Same controls and display as 2-player version
+
+📁 Files:
+- top.sv – Updated with AI integration
+- MoveGen.sv – AI logic
+- edge_detector.sv, X_ROM.sv, O_ROM.sv, fpga_pins.xdc
+
+🧪 Great demo of basic AI + digital system integration.
+
+──────────────────────────────────────────────
+
+These projects are perfect for exploring pixel-based hardware design, VGA synchronization, FSMs, and interactive FPGA games.
+Tested on the Nexys A7 FPGA board.

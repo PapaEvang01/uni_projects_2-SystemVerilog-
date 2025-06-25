@@ -1,0 +1,31 @@
+🎮 Rock-Paper-Scissors in SystemVerilog for FPGA
+
+This is a simple hardware implementation of the classic "Rock, Paper, Scissors" game, written in SystemVerilog 
+and designed to run on the Nexys A7 FPGA board.
+
+The goal of the project was to build a small combinational logic circuit that reads the moves of two players (A and B)
+and determines the outcome — whether the game is valid, a tie, a win for Player A, or a win for Player B.
+
+Inputs for each player are 3-bit one-hot encoded values:
+- 001 → Scissors
+- 010 → Rock
+- 100 → Paper
+
+If a player activates more than one input (e.g., 011 or 101), the move is considered invalid.
+
+🏗️ The design is broken into 4 separate logic modules:
+- `winnerA.sv`: Determines if Player A wins
+- `winnerB.sv`: Determines if Player B wins
+- `checkTie.sv`: Detects ties
+- `validIO.sv`: Checks input validity for both players
+
+Each module is fully combinational and works independently. 
+They all receive the same 6-bit input (`inA[2:0]` and `inB[2:0]`) and produce one output each (`winA`, `winB`, `tie`, and `valid`).
+
+🧪 The `/tb` folder includes individual testbenches for each module, 
+using `$monitor` and VCD wave dumps for waveform analysis with GTKWave.
+
+📎 The `/constraints` folder includes the `.xdc` file for the Nexys A7-100T, 
+where switches are mapped to player inputs and LEDs display game outputs.
+
+This was a small but fun digital design exercise showing how traditional logic can be mapped directly to hardware using FPGAs.

@@ -1,0 +1,36 @@
+🟦 VGA Tic-Tac-Toe Game (SystemVerilog – Nexys A7)
+
+This project implements a fully playable two-player Tic-Tac-Toe game using VGA output on an FPGA board 
+(tested on the Nexys A7-100T with a 100 MHz clock). 
+
+The game uses VGA display to render a 3x3 grid, move a cursor, and draw 'X' and 'O' symbols using ROM-based graphics.
+
+🎮 Gameplay Features:
+- Two-player game using 5 buttons: UP, DOWN, LEFT, RIGHT, and PLAY
+- Cursor highlights the current selectable square
+- Alternating turns between players (Player X starts)
+- Win/tie detection logic for rows, columns, and diagonals
+- Real-time symbol rendering from ROM memory
+
+🖥️ VGA Display:
+- Resolution: 800x600 @ 72Hz
+- Pixel timing logic handles HSYNC and VSYNC
+- Symbols displayed using pixel ROMs (X_ROM and O_ROM)
+- Squares are separated with white lines
+- Cursor is shown as a small blinking rectangle
+
+📂 Files:
+- `top.sv` – Top-level module: game logic, VGA timing, rendering
+- `edge_detector.sv` – Edge detector for button debouncing
+- `X_ROM.sv` – Pixel ROM for 'X' symbol
+- `O_ROM.sv` – Pixel ROM for 'O' symbol
+- `fpga_pins.xdc` – FPGA constraints file (buttons, VGA, clock, etc.)
+
+🔧 How to Use:
+1. Connect buttons to the FPGA as defined in `fpga_pins.xdc`
+2. Attach a VGA monitor
+3. Compile and upload the design
+4. Use buttons to navigate and play
+
+This was one of my first complete VGA-based games in hardware – a fun way to combine digital design, graphics, and game logic all in one!
+

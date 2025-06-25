@@ -1,0 +1,111 @@
+🖥️ Small SystemVerilog Projects
+
+This folder includes several compact SystemVerilog projects developed during my university studies.
+Each one explores a specific concept in digital design—from FSM control to Hamming coding, 
+arbitration logic, sorting networks, and hardware security.
+
+──────────────────────────────────────────────
+
+🖥️ FSM Server Resource Controller
+
+A finite state machine that controls access to a shared server by students.
+
+📌 Function:
+- At most 3 users can be connected at once.
+- FSM has 4 states (S0 to S3) corresponding to 0–3 active users.
+- Input: `in[0] = connect`, `in[1] = disconnect`
+- Output: `out = 1` means connection allowed
+
+🧠 Learned:
+- FSM modeling
+- Handling multiple inputs
+- Reset handling and state transitions
+
+──────────────────────────────────────────────
+
+🧮 Hamming Code (15,11) Encoder
+
+Implements a serial Hamming (15,11) encoder in SystemVerilog.
+
+📌 Overview:
+- Reads 11 input bits serially
+- Calculates 4 Hamming parity bits
+- Outputs a 15-bit codeword serially
+
+📁 Files:
+- `hamming_core.sv`: Hamming encoder module
+- `hamming_tb.sv`: Testbench with validation logic
+
+🧠 Learned:
+- Serial I/O handling
+- Bitwise parity logic
+- Automated self-checking testbenches
+
+──────────────────────────────────────────────
+
+🛰️ Network Switch with Request Arbitration
+
+A combinational module that simulates a 4-port data switch.
+
+📦 Behavior:
+- 4 data inputs (D[0]–D[3]) + 4 request signals (R[0]–R[3])
+- If one request is active ➝ forward data
+- Else ➝ output is zero
+
+🧠 Learned:
+- Data routing and arbitration
+- Index-based decision logic
+- Simple corner case handling in testbenches
+
+📁 Files:
+- `network_switch.sv`
+- `testbench.sv`
+
+──────────────────────────────────────────────
+
+📊 Odd-Even Merge Sorter
+
+Implements a sorting network using `sorter` modules and pipelining.
+
+📌 Architecture:
+- Compares and sorts four 8-bit values
+- Uses 5 interconnected comparator modules
+- Final output: max, second_max, second_min, min
+- Input/output register wrapper avoids combinational path
+
+📁 Files:
+- `sorter.sv`: Comparator
+- `even_odd_merge_sorter.sv`: Sorter network
+- `even_odd_merge_sorter_wrapper.sv`: Register wrapper
+- `even_odd_merge_sorter_tb.sv`: Testbench
+
+🧠 Learned:
+- Sorting networks
+- Static timing optimization
+- Modular and pipelined design
+
+──────────────────────────────────────────────
+
+🛡️ Trojan-Based Hardware Design
+
+Explores hardware Trojans and secure communication simulation.
+
+📌 Objective:
+- Insert a Trojan between two elastic registers
+- Trojan blocks data when `flush = 1`
+- Otherwise allows valid/ready transmission
+
+📁 Files:
+- `left_register.sv`, `right_register.sv`
+- `trojan.sv`: Top-level with Trojan logic
+- `trojan_tb.sv`: Testbench for validation
+
+🧠 Learned:
+- Valid/Ready protocol
+- Security-aware design and testing
+- Modular data path verification
+
+──────────────────────────────────────────────
+
+These projects provided a foundation in combinational/sequential logic, 
+testbench design, basic security, and real-world digital circuit constraints — all using SystemVerilog.

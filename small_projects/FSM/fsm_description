@@ -1,0 +1,26 @@
+🖥️ FSM Server Resource Controller – SystemVerilog
+
+This small SystemVerilog project implements a Finite State Machine (FSM) designed to manage limited computing resources in a university lab setting. 
+Specifically, the controller ensures that **at most 3 students** can be connected to a shared server at the same time.
+
+📘 What It Does:
+- The FSM has 4 states (S0 to S3), each representing how many students are currently connected (from 0 to 3).
+- The **input** is a 2-bit signal: 
+  - `in[0] = 1` means a student tries to connect.
+  - `in[1] = 1` means a student disconnects.
+- The **output** is a 1-bit signal:
+  - `out = 1` means the server is accepting new connections.
+  - `out = 0` means the maximum number of students is reached (3 connected).
+- The FSM also has a `reset` input that forces the system back to state S0 (no students connected).
+
+🧠 What I Learned:
+This project helped me practice FSM modeling in SystemVerilog, including:
+- State transitions based on combinational logic
+- Handling multiple inputs
+- Designing synchronous systems with asynchronous resets
+- Modeling real-world resource constraints in digital logic
+
+🔧 Tools Used:
+- HDL simulator (e.g., EDA Playground or ModelSim)
+- SystemVerilog
+

@@ -1,0 +1,27 @@
+🧮 Hamming Code (15,11) Encoder – SystemVerilog Project
+
+Another small digital design project from my university days is the implementation 
+of a (15,11) Hamming Code encoder using SystemVerilog. This project helped me 
+understand error-detecting and error-correcting codes at the hardware level and 
+how to build bit-accurate, serial-input/output logic systems.
+
+📌 Project Overview
+The module reads 11 input bits serially through the inp port, stores them in a buffer, 
+and calculates 4 parity bits based on the Hamming (15,11) code logic. 
+These parity bits are then combined with the original data to form a 15-bit output word.
+The entire 15-bit codeword is then transmitted serially via the out port.
+
+📂 Files
+hamming_core.sv — The main module handling serial input, parity calculation, and serial output.
+hamming_tb.sv — A testbench that initializes multiple test vectors, sends them into the encoder,
+                and verifies the output against expected reference values.
+
+🎯 What I Practiced
+Finite State Management via counters
+Serial data input/output processing
+Bit-level parity computation
+Writing reusable and automated testbenches
+Validating digital logic designs with waveform simulation and self-checking tests
+
+This project was a great hands-on exercise in designing reliable communication 
+hardware components and reinforced the value of structured verification and test-driven HDL design.

@@ -1,0 +1,34 @@
+🎨 VGA 4-Square Display – SystemVerilog Project
+
+This SystemVerilog project implements a basic VGA controller for the Nexys A7 FPGA that displays four colored squares on a monitor. 
+The output resolution is 800×600 at a refresh rate of 72Hz. All functionality, including timing and color generation, 
+is handled directly in hardware using pixel-based logic.
+
+🧠 How it works:
+The design generates the required HSYNC and VSYNC pulses according to the VGA 800x600@72Hz standard. 
+Pixel coordinates are tracked using horizontal and vertical counters. Based on those coordinates, 
+four rectangular regions on the screen are filled with distinct colors (Red, Green, Blue, and White) 
+by setting the RGB output signals accordingly.
+
+🛠️ What's included:
+- `PanelDisplay.sv`: The main module. Generates pixel clock, sync signals, and color logic.
+- `PanelDisplay_tb.sv`: A testbench that simulates the display logic, including a frame capture system that logs RGB values to a text file.
+- `vga_pins.xdc`: The Xilinx constraints file for mapping VGA signals and clock/reset pins on the Nexys A7 FPGA board.
+
+🔁 Key Features:
+- Clock divider: Converts 100 MHz input to 50 MHz pixel clock
+- Sync logic: Implements correct VGA timing for 800x600 resolution
+- RGB output: Defines color regions using coordinate ranges
+- Clean timing and rendering of 4 squares
+
+📟 Inputs:
+- `clk`: 100 MHz system clock
+- `rst`: Active-high reset signal
+
+📺 Outputs:
+- `hsync`, `vsync`: Horizontal and vertical sync pulses
+- `red`, `green`, `blue`: 4-bit color outputs for each channel (12-bit total RGB)
+
+The design has been tested both in simulation (with waveform and text logging) and on actual hardware, 
+providing clean square patterns on a VGA display.
+
