@@ -137,17 +137,12 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 - 🧿 **Nexys A7-100T FPGA Board**
 - 💾 Vivado Design Suite (for synthesis, simulation, and constraint management)
 
----
-
-## 📜 License
-
-This project is released under the MIT License. See the `LICENSE` file for details.
 
 ---
 
 ## 👨‍💻 Author
 
-**Vaggelis Paps**  
+**Vaggelis Papaioannou**  
 Department of Electrical & Computer Engineering  
 Democritus University of Thrace
 
