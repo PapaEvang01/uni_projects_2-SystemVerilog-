@@ -6,11 +6,11 @@ These projects were tested primarily on the **Nexys A7-100T FPGA board** and cov
 
 ---
 
-## 🎮 Rock-Paper-Scissors on FPGA
+##  Rock-Paper-Scissors on FPGA
 
 A simple combinational logic game based on the classic **Rock, Paper, Scissors**. Designed for FPGA using SystemVerilog.
 
-### 🧩 Features:
+### Features:
 - 2 players (A and B) using 3-bit one-hot encoded inputs:
   - `001`: Scissors
   - `010`: Rock
@@ -25,7 +25,7 @@ A simple combinational logic game based on the classic **Rock, Paper, Scissors**
 
 ---
 
-## 🖼️ VGA-Based Projects
+##  VGA-Based Projects
 
 ### 1. **VGA 4-Square Display**
 
@@ -60,7 +60,7 @@ An interactive 2-player Tic-Tac-Toe game with button control.
 
 Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
-#### 🧠 AI Strategy:
+####  AI Strategy:
 1. Win if possible  
 2. Block the player  
 3. Pick first available cell  
@@ -72,9 +72,9 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ---
 
-## 🧪 Small SystemVerilog Projects
+##  Small SystemVerilog Projects
 
-### 🖥️ FSM Server Controller
+###  FSM Server Controller
 
 - Controls up to 3 users accessing a server
 - FSM with 4 states (S0–S3)
@@ -83,7 +83,7 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ---
 
-### 🧮 Hamming (15,11) Encoder
+###  Hamming (15,11) Encoder
 
 - Serial input of 11 data bits
 - Calculates 4 parity bits
@@ -92,7 +92,7 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ---
 
-### 🛰️ Network Switch with Arbitration
+###  Network Switch with Arbitration
 
 - 4-port data switch using request signals
 - Routes data from active requests
@@ -100,7 +100,7 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ---
 
-### 📊 Odd-Even Merge Sorter
+###  Odd-Even Merge Sorter
 
 - Sorts four 8-bit numbers
 - Built with comparator network
@@ -109,7 +109,7 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ---
 
-### 🛡️ Hardware Trojan Simulation
+###  Hardware Trojan Simulation
 
 - Simulates a Trojan interrupting communication between elastic registers
 - Trojan blocks data when `flush=1`
@@ -132,7 +132,7 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ---
 
-## 🧰 Hardware Used
+##  Hardware Used
 
 - 🧿 **Nexys A7-100T FPGA Board**
 - 💾 Vivado Design Suite (for synthesis, simulation, and constraint management)
