@@ -74,7 +74,7 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ##  Small SystemVerilog Projects
 
-###  FSM Server Controller
+### i) FSM Server Controller
 
 - Controls up to 3 users accessing a server
 - FSM with 4 states (S0–S3)
@@ -83,7 +83,7 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ---
 
-###  Hamming (15,11) Encoder
+### ii) Hamming (15,11) Encoder
 
 - Serial input of 11 data bits
 - Calculates 4 parity bits
@@ -92,7 +92,7 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ---
 
-###  Network Switch with Arbitration
+### iii) Network Switch with Arbitration
 
 - 4-port data switch using request signals
 - Routes data from active requests
@@ -100,7 +100,7 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ---
 
-###  Odd-Even Merge Sorter
+### iv) Odd-Even Merge Sorter
 
 - Sorts four 8-bit numbers
 - Built with comparator network
@@ -109,7 +109,7 @@ Adds **AI opponent** for Player O using the `MoveGen.sv` module.
 
 ---
 
-###  Hardware Trojan Simulation
+### v) Hardware Trojan Simulation
 
 - Simulates a Trojan interrupting communication between elastic registers
 - Trojan blocks data when `flush=1`
