@@ -85,6 +85,32 @@ Implements a sorting network using `sorter` modules and pipelining.
 - Modular and pipelined design
 
 ──────────────────────────────────────────────
+🧪 Duplicate FIFO – Dual-Read Buffer Design
+
+A compact design that extends the traditional FIFO queue to support dual reads per data entry 
+— each value must be read twice before being removed.
+This mirrors multicast-like behavior found in certain network systems.
+
+📌 Operation:
+
+Standard push/pop FIFO interface
+Each data word is held in the queue until it has been read twice
+Internal counter tracks read occurrences per entry
+
+📁 Files:
+
+-duplicate_duth.sv: FIFO module with added control logic for duplicate reads
+-duplicate_tb.sv: Testbench covering normal operation, boundary conditions, and error handling (underflow, overflow, reset)
+
+🧠 Learned:
+
+Advanced FIFO buffering techniques
+One-hot encoded pointers and read-tracking mechanisms
+Fine-grained control flow and conditional updates
+Structured testbenching using task blocks and $strobe for precise observation
+This project strengthened my skills in modifying standard data structures and designing reliable control logic in SystemVerilog.
+
+──────────────────────────────────────────────
 
 🛡️ Trojan-Based Hardware Design
 
