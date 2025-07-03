@@ -14,7 +14,8 @@ If **only one** request is active, the switch forwards the corresponding data to
 - How to write a minimal but effective testbench with `$monitor` and `initial` blocks
 - The importance of verifying corner cases like multiple requests or no requests
 
-This project helped solidify my understanding of how combinational logic behaves when multiple conditions are involved, and how arbitration is handled in basic digital systems.
+This project helped solidify my understanding of how combinational logic behaves when multiple conditions are involved,
+and how arbitration is handled in basic digital systems.
 
 🛠️ Files:
 - `network_switch.sv`: Core module that implements the switch logic
